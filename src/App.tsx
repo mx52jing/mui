@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from './components/Button'
+
 
 function App() {
   const a = 123
@@ -8,18 +10,42 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Button>default</Button>
+        <Button
+          btnType="primary">
+          primary
+          </Button>
+        <Button
+          btnType="danger">
+          danger
+        </Button>
+        <Button
+          btnType="link"
+          href="https://www.baidu.com">
+          link
+        </Button>
+        <Button
+          btnType="link"
+          disabled
+          href="https://www.baidu.com">
+          disabled link
+        </Button>
+        <Button
+          btnType="primary"
+          size="sm">
+          sm
+        </Button>
+        <Button
+          size="lg">
+          large button
+        </Button>
+        <Button
+          disabled
+          size="lg">
+          large disabled btn
+        </Button>
       </header>
+      <button>test</button>
     </div>
   );
 }

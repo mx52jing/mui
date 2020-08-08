@@ -1,0 +1,41 @@
+.mui-btn {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    @include btn-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
+    text-align: center;
+    font-weight: $btn-font-weight;
+    line-height: $btn-line-height;
+    color: $body-color;
+    border: $btn-border-width solid transparent;
+    background-image: none;
+    box-shadow: $btn-box-shadow;
+    cursor: pointer;
+    user-select: none;
+    transition: $btn-transition;
+    outline: none;
+    &.disabled,
+    &[disabled] {
+        opacity: $btn-disabled-opacity;
+        cursor: not-allowed;
+        box-shadow: none;
+        > * {
+            pointer-events: none;
+        }
+    }
+    &-sm {
+        @include btn-size($btn-padding-y-sm, $btn-padding-y-sm, $btn-font-size-sm, $btn-border-radius-sm) 
+    }
+    &-lg {
+        @include btn-size($btn-padding-y-lg, $btn-padding-y-lg, $btn-font-size-lg, $btn-border-radius-lg) 
+    }
+    &-default {
+        @include btn-color($white, $gray-400, $body-color, $white, $primary, $primary)
+    }
+    &-primary {
+        @include btn-color($primary, $primary, $white)
+    }
+    &-danger {
+        @include btn-color($danger, $danger, $white)
+    }
+}

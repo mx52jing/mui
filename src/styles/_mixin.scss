@@ -1,0 +1,42 @@
+// 按钮padding/字体大小/边框radius
+@mixin btn-size(
+    $padding-y,
+    $padding-x,
+    $font-size,
+    $border-radius
+) {
+    padding: $padding-y $padding-x;
+    font-size: $font-size;
+    border-radius: $border-radius;
+}
+// 按钮字体/背景/边框颜色
+@mixin btn-color(
+    $background-color,
+    $border-color,
+    $color,
+    $background-color__hover: lighten($background-color, 7.5%),
+    $border-color__hover: lighten($border-color, 10%),
+    $color__hover: $color
+) {
+    background-color: $background-color;
+    border-color: $border-color;
+    color: $color;
+    // &:hover {
+    //     background-color: $background-color__hover;
+    //     border-color: $border-color__hover;
+    //     color: $color__hover; 
+    // }
+    // &:focus,
+    // &.focus {
+    //     background-color: $background-color__hover;
+    //     border-color: $border-color__hover;
+    //     color: $color__hover; 
+    // }
+    &.disabled,
+    &[disabled] {
+        background-color: $background-color;
+        border-color: $border-color;
+        color: $color;
+    }
+}
+
