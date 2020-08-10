@@ -18,7 +18,14 @@ interface IButtonProps {
     children?: React.ReactNode
 }
 
-const Button: React.FC<IButtonProps> = props => {
+// ts为button元素本身提供的一些属性类型
+type NativeBtnProps = IButtonProps & React.ButtonHTMLAttributes<HTMLElement>
+// ts为a链接元素提供的属性类型
+type AnchorBtnProps = IButtonProps & React.AnchorHTMLAttributes<HTMLElement>
+// 定义最终的ButtonProps(Partial将属性都变成可选的)
+type ButtonProps = Partial<NativeBtnProps & AnchorBtnProps>
+
+const Button: React.FC<ButtonProps> = props => {
     const {
         className,
         btnType,

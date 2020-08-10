@@ -21,17 +21,13 @@
     background-color: $background-color;
     border-color: $border-color;
     color: $color;
-    // &:hover {
-    //     background-color: $background-color__hover;
-    //     border-color: $border-color__hover;
-    //     color: $color__hover; 
-    // }
-    // &:focus,
-    // &.focus {
-    //     background-color: $background-color__hover;
-    //     border-color: $border-color__hover;
-    //     color: $color__hover; 
-    // }
+    &:hover,
+    &:focus,
+    &.focus {
+        background-color: $background-color__hover;
+        border-color: $border-color__hover;
+        color: $color__hover;
+    }
     &.disabled,
     &[disabled] {
         background-color: $background-color;

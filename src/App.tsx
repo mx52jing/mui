@@ -1,17 +1,13 @@
 import React from 'react';
 import Button from './components/Button'
 
-
 function App() {
-  const a = 123
-  if (typeof a == 'string') {
-
-  }
   return (
     <div className="App">
       <header className="App-header">
         <Button>default</Button>
         <Button
+          size="lg"
           btnType="primary">
           primary
           </Button>
@@ -33,7 +29,7 @@ function App() {
         <Button
           btnType="primary"
           size="sm">
-          sm
+          sm button
         </Button>
         <Button
           size="lg">
@@ -45,7 +41,6 @@ function App() {
           large disabled btn
         </Button>
       </header>
-      <button>test</button>
     </div>
   );
 }

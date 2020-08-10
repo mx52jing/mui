@@ -6,7 +6,6 @@
     text-align: center;
     font-weight: $btn-font-weight;
     line-height: $btn-line-height;
-    color: $body-color;
     border: $btn-border-width solid transparent;
     background-image: none;
     box-shadow: $btn-box-shadow;
@@ -23,14 +22,18 @@
             pointer-events: none;
         }
     }
+    &:focus,
+    &.focus {
+        outline: none;
+    }
     &-sm {
-        @include btn-size($btn-padding-y-sm, $btn-padding-y-sm, $btn-font-size-sm, $btn-border-radius-sm) 
+        @include btn-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm) 
     }
     &-lg {
-        @include btn-size($btn-padding-y-lg, $btn-padding-y-lg, $btn-font-size-lg, $btn-border-radius-lg) 
+        @include btn-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg) 
     }
     &-default {
-        @include btn-color($white, $gray-400, $body-color, $white, $primary, $primary)
+        @include btn-color($white, $gray-400, lighten($body-color, 20%), $white, $primary, $primary)
     }
     &-primary {
         @include btn-color($primary, $primary, $white)
