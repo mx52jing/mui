@@ -41,7 +41,7 @@ const Button: React.FC<ButtonProps> = props => {
     const classes = classnames(classPrefix, className, {
         [`${classPrefix}-${btnType}`]: !!btnType,
         [`${classPrefix}-${size}`]: !!size,
-        [`${classPrefix}-disabled`]: (isLinkBtn && disabled)
+        disabled: (isLinkBtn && disabled)
     })
     if(isLinkBtn && !!href) {
         return (

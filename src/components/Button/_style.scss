@@ -13,7 +13,6 @@
     user-select: none;
     transition: $btn-transition;
     outline: none;
-    &.disabled,
     &[disabled] {
         opacity: $btn-disabled-opacity;
         cursor: not-allowed;
@@ -40,5 +39,25 @@
     }
     &-danger {
         @include btn-color($danger, $danger, $white)
+    }
+    &-link {
+        font-weight: $font-weight-normal;
+        color: $btn-link-color;
+        text-decoration: $link-decoration;
+        box-shadow: none;
+        &:hover {
+            color: $btn-link-hover-color;
+            text-decoration: $link-hover-decoration; 
+        }
+        &:focus,
+        &.focus {
+          text-decoration: $link-hover-decoration;
+          box-shadow: none;
+        }
+        &:disabled,
+        &.disabled {
+          color: $btn-link-disabled-color;
+          pointer-events: none;
+        }
     }
 }
